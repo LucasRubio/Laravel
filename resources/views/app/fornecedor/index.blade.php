@@ -40,7 +40,9 @@
     Fornecedor Inativo!
 @endunless
 
-//Função Isset:
+
+
+//Função Isset & Funçao Empty:
 
 @isset($fornecedores)
     Fornecedor: {{ $fornecedores[0]['nome'] }}
@@ -50,6 +52,10 @@
     @isset($fornecedores[0]['cnpj'])
         CNPJ: {{ $fornecedores[0]['cnpj'] }}
     @endisset
+    @empty($fornecedores[0]['cnpj'])
+        Variável vazia
+    @endempty
+
 @endisset--}}
 
 

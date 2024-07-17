@@ -16,7 +16,8 @@ class FornecedoresController extends Controller
             
             1 => [
                 'nome' => 'Unidade Corporation', 
-                'status' => 'S'
+                'status' => 'S',
+                'cnpj' => '09.472.348/0001-67'
             ]
         ];
 
