@@ -42,7 +42,7 @@
 
 
 
-//Função Isset & Funçao Empty:
+//Função Isset & Funçao Empty:--}}
 
 @isset($fornecedores)
     Fornecedor: {{ $fornecedores[0]['nome'] }}
@@ -56,6 +56,6 @@
         Variável vazia
     @endempty
 
-@endisset--}}
+@endisset
 
 

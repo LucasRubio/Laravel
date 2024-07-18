@@ -16,10 +16,14 @@ class FornecedoresController extends Controller
             
             1 => [
                 'nome' => 'Unidade Corporation', 
-                'status' => 'S',
-                'cnpj' => '09.472.348/0001-67'
+                'status' => 'S'
             ]
         ];
+        //Operadores ternários:
+
+        //condicao ? se verdade : se falso;
+        //condicao ? se verdade : (condicao ? se verdade : se falso);
+        //$msg =     isset($fornecedores[1]['cnpj']) ? 'CNPJ Informado' : 'CNPJ não informado';
 
         return view('app.fornecedor.index', compact('fornecedores'));
     }
