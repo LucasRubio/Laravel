@@ -42,20 +42,35 @@
 
 
 
-//Função Isset & Funçao Empty:--}}
+//Função Isset & Funçao Empty & switch and case:--}}
 
 @isset($fornecedores)
     Fornecedor: {{ $fornecedores[0]['nome'] }}
     <br>
     Status: {{ $fornecedores[0]['status'] }}
     <br>
-    @isset($fornecedores[0]['cnpj'])
-        CNPJ: {{ $fornecedores[0]['cnpj'] }}
-    @endisset
-    @empty($fornecedores[0]['cnpj'])
+    CNPJ: {{ $fornecedores[0]['cnpj'] ?? 'Dado não foi preenchido'}}
+    <br>
+    Telefone: ({{ $fornecedores[1]['ddd'] ?? 'Dado não foi preenchido'}}) {{ $fornecedores[1]['telefone'] ?? '' }}
+    @switch ($fornecedores[1]['ddd'])
+        @case ('11')
+            São Paulo - SP
+            @break
+        @case ('19')
+            Campinas - SP
+            @break
+        @default
+            Estado não identificado
+    @endswitch
+
+@endisset
+{{--    @empty($fornecedores[0]['cnpj'])
         Variável vazia
     @endempty
 
-@endisset
+@endisset--}}
+
+
+
 
 
